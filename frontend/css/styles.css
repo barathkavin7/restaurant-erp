@@ -12,7 +12,7 @@
   --gold: #f2a83b;
   --blue: #2e6fd8;
   --shadow: 0 24px 80px rgba(23, 32, 42, 0.16);
-  --radius: 8px;
+  --radius: 20px;
 }
 
 * {
@@ -225,11 +225,71 @@ textarea {
 .metric-card,
 .panel,
 .table-card,
-.order-card {
+.order-card,
+.cart-item,
+.hero-panel {
+
+position: relative;
+overflow: hidden;
+
   border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border-radius: 28px;
   background: var(--glass-strong);
-  box-shadow: 0 14px 40px rgba(23, 32, 42, 0.09);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08),
+    0 2px 8px rgba(0,0,0,0.04);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.food-card:hover,
+.review-card:hover,
+.metric-card:hover,
+.panel:hover,
+.table-card:hover,
+.order-card:hover,
+.cart-item:hover,
+.hero-panel:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.15),
+    0 10px 25px rgba(255,140,0,0.12);
+
+  border-color: rgba(255,140,0,0.35);
+}
+
+.food-card::before,
+.review-card::before,
+.metric-card::before,
+.panel::before,
+.table-card::before,
+.order-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    rgba(255,140,0,0.08),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.food-card:hover::before,
+.review-card:hover::before,
+.metric-card:hover::before,
+.panel:hover::before,
+.table-card:hover::before,
+.order-card:hover::before {
+  opacity: 1;
 }
 
 .food-card {
@@ -810,4 +870,17 @@ th {
 .cart-remove-btn:hover {
   background: #fecaca;
   transform: scale(1.05);
+}
+
+.special-list {
+  margin-top: 16px;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+}
+
+.special-list li {
+  font-weight: 600;
+  color: var(--text);
 }
