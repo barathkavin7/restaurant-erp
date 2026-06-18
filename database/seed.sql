@@ -1,4 +1,4 @@
-USE restaurant_erp_pro;
+USE intern3_db;
 
 INSERT INTO roles (id, name, description) VALUES
 (1, 'Admin', 'Full system access'),

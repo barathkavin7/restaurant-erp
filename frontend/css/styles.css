@@ -117,6 +117,19 @@ textarea {
   box-shadow: 0 14px 32px rgba(14, 124, 102, 0.24);
 }
 
+.btn-secondary {
+  background: linear-gradient(135deg, #ff7a18, #ff4d4d);
+  color: #fff;
+  border: none;
+  box-shadow: 0 10px 25px rgba(255, 94, 58, 0.35);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(255, 94, 58, 0.45);
+}
+
 .btn-ghost {
   color: var(--text);
   background: rgba(255, 255, 255, 0.54);
@@ -757,4 +770,44 @@ th {
     align-items: stretch;
     flex-direction: column;
   }
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  padding: 16px;
+  margin-bottom: 12px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+.cart-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cart-remove-btn {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #fee2e2;
+  color: #dc2626;
+
+  cursor: pointer;
+  font-size: 18px;
+
+  transition: 0.2s;
+}
+
+.cart-remove-btn:hover {
+  background: #fecaca;
+  transform: scale(1.05);
 }

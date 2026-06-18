@@ -29,7 +29,7 @@ const sectionLabels = {
   createOrder: 'Create Order',
   kitchen: 'Kitchen',
   billing: 'Billing',
-  cart: 'Cart',
+  cart: `Cart (${state.cart.length})`,
   profile: 'Profile'
 };
 
@@ -53,11 +53,18 @@ function setTitle(user) {
 
 function renderNav() {
   const nav = document.getElementById('roleNav');
+
   nav.innerHTML = roleSections[state.user.role].map((section) => `
-    <button class="${section === state.activeSection ? 'active' : ''}" data-section="${section}">
-      ${sectionLabels[section]}
+    <button
+      class="${section === state.activeSection ? 'active' : ''}"
+      data-section="${section}"
+    >
+      ${section === 'cart'
+        ? `Cart (${state.cart.length})`
+        : sectionLabels[section]}
     </button>
   `).join('');
+
   nav.querySelectorAll('button').forEach((button) => {
     button.addEventListener('click', () => {
       state.activeSection = button.dataset.section;
@@ -233,8 +240,31 @@ function renderCart(content) {
       <div class="panel">
         <div class="panel-head"><h3>Your Cart</h3><strong>${rupees(total)}</strong></div>
         <div class="cart-list">
-          ${state.cart.length ? state.cart.map((item) => `<div class="cart-item"><div><strong>${item.name}</strong><span class="muted">${item.quantity} x ${rupees(item.price)}</span></div></div>`).join('') : '<p class="muted">Add dishes from the menu.</p>'}
+  ${state.cart.length
+    ? state.cart.map((item) => `
+      <div class="cart-item">
+
+        <div class="cart-details">
+          <strong>${item.name}</strong>
+
+          <span class="muted">
+            ${item.quantity} x ${rupees(item.price)}
+          </span>
         </div>
+
+        <button
+          class="cart-remove-btn"
+          data-remove-cart="${item.menuItemId}"
+          type="button"
+        >
+          🗑
+        </button>
+
+      </div>
+    `).join('')
+    : '<p class="muted">Add dishes from the menu.</p>'
+  }
+</div>
       </div>
       <form id="orderForm" class="panel form-stack">
         <h3>Place Order</h3>
@@ -246,6 +276,18 @@ function renderCart(content) {
     </section>
   `;
   document.getElementById('orderForm').addEventListener('submit', submitOrder);
+
+content.querySelectorAll('[data-remove-cart]').forEach((button) => {
+  button.addEventListener('click', () => {
+    const id = Number(button.dataset.removeCart);
+
+    state.cart = state.cart.filter(
+      (item) => item.menuItemId !== id
+    );
+
+    render();
+  });
+});
 }
 
 async function submitOrder(event) {

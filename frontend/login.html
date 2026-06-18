@@ -21,7 +21,7 @@
         <h1>Welcome back to your restaurant command center.</h1>
         <p>Sign in to manage orders, kitchen queues, reservations, billing, analytics, and customer service from one polished ERP workspace.</p>
         <div class="login-stats glass">
-          <div><strong>6</strong><span>Roles</span></div>
+          <div><strong>5</strong><span>Roles</span></div>
           <div><strong>Real-time</strong><span>Kitchen updates</span></div>
           <div><strong>JWT</strong><span>Protected APIs</span></div>
         </div>
@@ -32,36 +32,33 @@
           <span class="brand-mark">RP</span>
           <div>
             <h2>Login</h2>
-            <p>Use one of the seeded demo accounts.</p>
+            <p><p>Secure Role-Based Authentication</p></p>
           </div>
         </div>
         <form id="loginForm" class="form-stack">
           <label>
             <span>Email</span>
-            <input id="email" name="email" type="email" value="admin@restaurant.com" autocomplete="email" required>
+            <input id="email" name="email" type="email" autocomplete="off" required>
           </label>
           <label>
             <span>Password</span>
-            <input id="password" name="password" type="password" value="Admin@123" autocomplete="current-password" required>
+            <input id="password" name="password" type="password" autocomplete="new-password" required>
           </label>
           <div class="form-row">
             <label class="check-line">
               <input id="rememberMe" type="checkbox" checked>
               <span>Remember me</span>
             </label>
-            <button class="link-button" type="button">Forgot password?</button>
           </div>
+
+<div class="login-footer">
+  RestaurantERP Pro © 2026
+</div>
+
+
           <button class="btn btn-primary btn-full" type="submit">Login</button>
           <p id="loginMessage" class="form-message" role="alert"></p>
         </form>
-        <div class="demo-strip">
-          <button data-email="admin@restaurant.com" data-password="Admin@123">Admin</button>
-          <button data-email="manager@restaurant.com" data-password="Manager@123">Manager</button>
-          <button data-email="waiter@restaurant.com" data-password="Waiter@123">Waiter</button>
-          <button data-email="chef@restaurant.com" data-password="Chef@123">Chef</button>
-          <button data-email="cashier@restaurant.com" data-password="Cashier@123">Cashier</button>
-          <button data-email="customer@restaurant.com" data-password="Customer@123">Customer</button>
-        </div>
       </section>
     </main>
 

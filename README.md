@@ -63,7 +63,6 @@ restaurant-erp/
 | Chef | chef@restaurant.com | Chef@123 |
 | Cashier | cashier@restaurant.com | Cashier@123 |
 | Waiter | waiter@restaurant.com | Waiter@123 |
-| Customer | customer@restaurant.com | Customer@123 |
 
 ## Local Installation
 

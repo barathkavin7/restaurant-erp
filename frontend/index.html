@@ -22,7 +22,12 @@
         <a href="#reviews">Reviews</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="btn btn-primary" href="/login.html">Login</a>
+      <div class="hero-actions">
+  <a class="btn btn-primary" href="/login.html">Staff Login</a>
+  <button id="headerOrderBtn" class="btn btn-secondary">
+  Order Now
+</button>
+</div>
     </header>
 
     <main>
@@ -32,9 +37,12 @@
           <h1>RestaurantERP Pro</h1>
           <p class="hero-copy">A complete restaurant management and ordering system for reservations, kitchen workflow, billing, customer orders, and real-time analytics.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="/login.html">Open ERP</a>
-            <a class="btn btn-ghost" href="#menu">Explore Menu</a>
-          </div>
+  <button id="heroOrderBtn" class="btn btn-primary">
+  Order Now
+</button>
+  <a class="btn btn-secondary" href="/login.html">Staff Login</a>
+  <a class="btn btn-ghost" href="#menu">Explore Menu</a>
+</div>
         </div>
         <div class="hero-panel glass">
           <span>Today</span>
@@ -55,9 +63,11 @@
         <div>
           <p class="eyebrow">Reservations</p>
           <h2>Plan a family table with ease</h2>
-          <p>Customers can reserve tables after login, while managers approve or reject requests from the dashboard.</p>
+          <p>Guests can reserve tables instantly, while managers approve or reject requests from the dashboard.</p>
         </div>
-        <a class="btn btn-primary" href="/login.html">Reserve a Table</a>
+        <a class="btn btn-primary" href="/dashboard.html?guest=true">
+  Reserve a Table
+</a>
       </section>
 
       <section id="reviews" class="section">
@@ -76,13 +86,14 @@
           <p>Open daily: 11:00 AM to 11:00 PM</p>
         </div>
         <div class="glass contact-card">
-          <strong>Demo login accounts</strong>
-          <span>Admin, Manager, Waiter, Chef, Cashier, and Customer accounts are included in seed.sql.</span>
+          <strong>Staff Access</strong>
+<span>Admin, Manager, Waiter, Chef, and Cashier accounts are available for system access.</span>
         </div>
       </section>
     </main>
 
-    <script src="/js/api.js"></script>
-    <script src="/js/home.js"></script>
+   <script src="/js/api.js"></script>
+<script src="/js/home.js"></script>
+<script src="/js/guest-order.js"></script>
   </body>
 </html>

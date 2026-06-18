@@ -1,5 +1,4 @@
-CREATE DATABASE IF NOT EXISTS restaurant_erp_pro CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE restaurant_erp_pro;
+USE intern3_db;
 
 SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS activity_logs;

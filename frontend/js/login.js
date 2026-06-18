@@ -7,7 +7,7 @@ const rememberMe = document.getElementById('rememberMe');
 document.querySelectorAll('.demo-strip button').forEach((button) => {
   button.addEventListener('click', () => {
     email.value = button.dataset.email;
-    password.value = button.dataset.password;
+    password.value = '';
   });
 });
 
