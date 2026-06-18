@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RestaurantERP Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/favicon.svg">
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/">
+        <span class="brand-mark">RP</span>
+        <span>RestaurantERP Pro</span>
+      </a>
+      <nav class="site-nav">
+        <a href="#menu">Menu</a>
+        <a href="#reservation">Reservation</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="/login.html">Login</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Multi-Cuisine Family Restaurant</p>
+          <h1>RestaurantERP Pro</h1>
+          <p class="hero-copy">A complete restaurant management and ordering system for reservations, kitchen workflow, billing, customer orders, and real-time analytics.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/login.html">Open ERP</a>
+            <a class="btn btn-ghost" href="#menu">Explore Menu</a>
+          </div>
+        </div>
+        <div class="hero-panel glass">
+          <span>Today</span>
+          <strong id="heroRevenue">Live dashboards</strong>
+          <small>Orders, kitchen, reservations, and payments sync in real time.</small>
+        </div>
+      </section>
+
+      <section id="menu" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Featured dishes</p>
+          <h2>Fresh plates across every cuisine</h2>
+        </div>
+        <div id="featuredDishes" class="card-grid menu-preview"></div>
+      </section>
+
+      <section id="reservation" class="section reservation-band">
+        <div>
+          <p class="eyebrow">Reservations</p>
+          <h2>Plan a family table with ease</h2>
+          <p>Customers can reserve tables after login, while managers approve or reject requests from the dashboard.</p>
+        </div>
+        <a class="btn btn-primary" href="/login.html">Reserve a Table</a>
+      </section>
+
+      <section id="reviews" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Guest feedback</p>
+          <h2>Approved customer reviews</h2>
+        </div>
+        <div id="reviewList" class="card-grid reviews-grid"></div>
+      </section>
+
+      <section id="contact" class="section contact-grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>RestaurantERP Pro Demo Restaurant</h2>
+          <p>MG Road, Bengaluru, Karnataka</p>
+          <p>Open daily: 11:00 AM to 11:00 PM</p>
+        </div>
+        <div class="glass contact-card">
+          <strong>Demo login accounts</strong>
+          <span>Admin, Manager, Waiter, Chef, Cashier, and Customer accounts are included in seed.sql.</span>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/home.js"></script>
+  </body>
+</html>
