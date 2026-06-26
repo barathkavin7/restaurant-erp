@@ -4,7 +4,7 @@ document.querySelectorAll('#headerOrderBtn, #heroOrderBtn')
       try {
         const data = await RestaurantAPI.post('/api/auth/login', {
           email: 'customer@restaurant.com',
-          password: 'Customer@123'
+          password: 'abcd1234'
         });
 
         RestaurantAPI.setSession(

@@ -2,7 +2,7 @@ require('dotenv').config();
 
 module.exports = {
   nodeEnv: process.env.NODE_ENV || 'development',
-  port: Number(process.env.PORT || 3000),
+  port: Number(process.env.PORT || 3104),
   appUrl: process.env.APP_URL || 'http://localhost:3000',
   jwtSecret: process.env.JWT_SECRET || 'dev_restaurant_erp_secret_change_me',
   jwtExpiresIn: process.env.JWT_EXPIRES_IN || '1d',
